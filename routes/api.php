@@ -19,3 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('transmitirRegistro',[\App\Http\Controllers\RegistroSent::class, 'registro']);
+Route::get('si',function (){
+    return ['mensaje' => 'si'];
+});
+
