@@ -22,6 +22,7 @@ class SARegistro implements ShouldBroadcast
     public function __construct($registro)
     {
         $this->registro = $registro;
+//        dd($this->registro->estudiantes->id_tutores);
 
     }
     /**
@@ -33,6 +34,7 @@ class SARegistro implements ShouldBroadcast
     {
         return [
             new Channel('SmartAccess'),
+//            new Channel('SmartAccess.'.$this->registro['estudiantes']['id_tutores']),
         ];
     }
 }
